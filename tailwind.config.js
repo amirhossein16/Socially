@@ -5,24 +5,21 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: "#0A0A0A",
-        card: "#0A0A0A",
-        border: "#262626",
+        background: "var(--background)",
+        card: "var(--card)",
+        border: "var(--border)",
 
         text: {
-          primary: "#FAFAFA",
-          secondary: "#A3A3A3",
-          tertiary: "#575757",
-          opposite: "#171717",
+          primary: "var(--text-primary)",
+          secondary: "var(--text-secondary)",
+          tertiary: "var(--text-tertiary)",
         },
 
         brand: {
-          main: "#3B82F6",
-          secondary: "#7E97C0",
-          tertiary: "#8D9CB5",
+          main: "var(--brand-main)",
         },
 
-        error: "#EF4444",
+        error: "var(--error)",
       },
 
       fontFamily: {

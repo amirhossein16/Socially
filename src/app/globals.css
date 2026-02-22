@@ -11,3 +11,31 @@
     @apply border-border;
   }
 }
+
+:root {
+  --background: #ffffff;
+  --card: #ffffff;
+  --border: #e5e5e5;
+
+  --text-primary: #171717;
+  --text-secondary: #737373;
+  --text-tertiary: #a6a6a6;
+
+  --brand-main: #3b82f6;
+
+  --error: #ef4444;
+}
+
+.dark {
+  --background: #0a0a0a;
+  --card: #0a0a0a;
+  --border: #262626;
+
+  --text-primary: #fafafa;
+  --text-secondary: #a3a3a3;
+  --text-tertiary: #575757;
+
+  --brand-main: #3b82f6;
+
+  --error: #ef4444;
+}
