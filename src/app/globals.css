@@ -11,31 +11,36 @@
     @apply border-border;
   }
 }
-
 :root {
-  --background: #ffffff;
+  --background: #f5f5f5;
   --card: #ffffff;
   --border: #e5e5e5;
 
   --text-primary: #171717;
-  --text-secondary: #737373;
-  --text-tertiary: #a6a6a6;
+  --text-secondary: #525252;
+  --text-tertiary: #a3a3a3;
 
   --brand-main: #3b82f6;
+
+  --like: #ef4444;
+  --comment: #3b82f6;
 
   --error: #ef4444;
 }
 
 .dark {
-  --background: #0a0a0a;
-  --card: #0a0a0a;
+  --background: #000000;
+  --card: #111111;
   --border: #262626;
 
   --text-primary: #fafafa;
   --text-secondary: #a3a3a3;
-  --text-tertiary: #575757;
+  --text-tertiary: #525252;
 
   --brand-main: #3b82f6;
+
+  --like: #ef4444;
+  --comment: #3b82f6;
 
   --error: #ef4444;
 }

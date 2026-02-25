@@ -2,7 +2,7 @@ import { forwardRef } from "react";
 import clsx from "clsx";
 import type { CardProps } from "./card.types";
 
-const baseStyles = "rounded-lg border border-border bg-card";
+const baseStyles = "rounded-2xl border border-border bg-card transition-colors";
 
 const paddingStyles = {
   none: "",

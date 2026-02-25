@@ -1,22 +1,56 @@
-import { Avatar } from "./shared/ui/avatar/Avatar";
-import { Button } from "./shared/ui/button/Button";
+import { useState } from "react";
+import { Header } from "./shared/components/layout/Header";
+import { HomeLayout } from "./shared/components/layout/HomeLayout";
+import { WelcomeCard } from "./shared/components/WelcomeCard/WelcomeCard";
 import { Card } from "./shared/ui/card/Card";
+import { CreatePostCard } from "./features/post/components/CreatePostCard";
+import { PostCard } from "./features/post/components/PostCard";
 
 function App() {
+  const [dark, setDark] = useState(true);
+
+  const toggleTheme = () => {
+    document.documentElement.classList.toggle("dark");
+    setDark(!dark);
+  };
+
   return (
-    <div className="p-10 space-y-6">
-      <div className="p-10 space-x-4 flex items-center">
-        <Avatar name="Farshad" />
-        <Avatar size="sm" name="Ali" />
-        <Avatar size="lg" name="Hossein" />
-      </div>
-      <Card>
-        <h2 className="text-lg font-semibold mb-4">Welcome Back!</h2>
-        <Button className="w-full mb-2">Log In</Button>
-        <Button variant="secondary" className="w-full">
-          Sign Up
-        </Button>
-      </Card>
+    <div className="min-h-screen bg-background">
+      <Header isAuthenticated={false} onToggleTheme={toggleTheme} />
+
+      <HomeLayout
+        left={
+          <WelcomeCard
+            user={{
+              name: "Farshad",
+              email: "farshad@example.com",
+            }}
+            onSignOut={() => alert("Signed out")}
+          />
+        }
+        center={
+          <div className="space-y-6">
+            <CreatePostCard />
+
+            <PostCard
+              author="Farshad"
+              time="2h"
+              content="This is my first post in Socially 🚀"
+            />
+
+            <PostCard
+              author="Sara"
+              time="5h"
+              content="Design matters. Details matter."
+            />
+          </div>
+        }
+        right={
+          <Card>
+            <p className="text-text-secondary">Right Panel</p>
+          </Card>
+        }
+      />
     </div>
   );
 }

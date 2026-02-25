@@ -8,6 +8,8 @@ export default {
         background: "var(--background)",
         card: "var(--card)",
         border: "var(--border)",
+        like: "var(--like)",
+        comment: "var(--comment)",
 
         text: {
           primary: "var(--text-primary)",
@@ -21,7 +23,9 @@ export default {
 
         error: "var(--error)",
       },
-
+      borderRadius: {
+        xl2: "12px",
+      },
       fontFamily: {
         sans: ["Inter", "sans-serif"],
       },
